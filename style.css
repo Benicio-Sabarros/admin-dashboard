@@ -1,4 +1,4 @@
-html, body{
+*{
     padding: 0;
     margin: 0;
 }
@@ -19,10 +19,43 @@ html, body{
 .header{
     background-color: white;
     grid-column: 2;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 .main{
     background-color: grey;
     grid-column: 2;
     grid-row: 2;
+    background-image: url(./images/Thought\ cabinet.webp);
+}
+
+ul{
+    list-style: none;
+}
+
+h2, h4{
+    font-family: "Bona Nova SC", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h4{color: white;}
+
+p, li{
+    font-family: "Libre Baskerville", serif;
+    font-weight: medium;
+    font-style: normal;
+    color: white;
+}
+
+button{
+    font-family: "Noto Sans", sans-serif;
+}
+
+svg{
+    height: 20px;
+    width: 20px;
+    fill: white;
 }

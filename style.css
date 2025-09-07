@@ -20,9 +20,6 @@
 .header{
     background-color: white;
     grid-column: 2;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr;
     background-image: url(./images/backgrounds/header.png);
 }
 
@@ -41,10 +38,15 @@
 
 .main > div{
     background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .main > div > div{
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
 }
 
 .thoughts{
@@ -53,7 +55,17 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
     grid-template-rows: auto;
     gap: 15px;
-    padding: 15px;
+}
+
+.thought{height: min-content}
+
+.thought p{
+    margin-top: 5px;
+}
+
+.icons{
+    justify-self: end;
+    align-self: end;
 }
 
 .tasks{grid-column: 2 / 3;}
@@ -63,19 +75,48 @@
     grid-row: 2 / 3;
 }
 
+#characters, #tasks{
+    display: grid;
+    align-content: space-around;
+    height: 90%;
+    margin-top: 20px;
+}
+
+.task{
+    margin-top: 15px;
+}
+
+#characters{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.character{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: max-content max-content;
+    gap: 5px;
+}
+
+
 .image{
     height: 50px;
     width: 50px;
     border-radius: 50%;
     background-position: center;
     background-size: cover;
+    grid-row: 1 / 3;
+}
+
+.name{
+    grid-column: 2 / 3;
 }
 
 ul{
     list-style: none;
 }
 
-h2, h3, h4, h5{
+h2, h3, h4, h5, .name{
     font-family: "Bona Nova SC", serif;
     font-weight: 700;
     font-style: normal;
